@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felpudos y Servicios - Catálogo 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #dc2626;
+            --accent-light: #ef4444;
+            --gold: #f59e0b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .flyer {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Header Premium */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(220,38,38,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .brand {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .brand-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+        
+        .brand-subtitle {
+            color: #94a3b8;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .contact-ribbon {
+            display: inline-flex;
+            gap: 40px;
+            margin-top: 30px;
+            padding: 18px 40px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        /* Content */
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+        
+        .section-line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 10px 20px -5px rgba(220,38,38,0.3);
+        }
+        
+        /* Product Cards */
+        .products-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 6px -1px rgba(220,38,38,0.3);
+            z-index: 2;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 30px;
+        }
+        
+        .product-category {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        
+        .product-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .product-specs {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            box-shadow: 0 10px 15px -3px rgba(15,23,42,0.2);
+        }
+        
+        .currency {
+            font-size: 16px;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .tax {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-left: 4px;
+        }
+        
+        /* Custom Order Card */
+        .custom-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px dashed var(--gold);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .custom-card::before {
+            content: '★';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 60px;
+            color: var(--gold);
+            opacity: 0.3;
+        }
+        
+        .custom-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .custom-text {
+            color: #92400e;
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .custom-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-button:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+        
+        /* Mixed Mats Section */
+        .mixed-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .mixed-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mixed-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+        }
+        
+        .mixed-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .size-display {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .size-label {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .mixed-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .mixed-currency {
+            font-size: 18px;
+            color: var(--gray);
+        }
+        
+        /* Antifatiga Section */
+        .antifatiga-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid #a7f3d0;
+        }
+        
+        .antifatiga-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .antifatiga-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .antifatiga-visual {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .antifatiga-visual.thin {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .antifatiga-visual.thick {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        
+        .thickness {
+            font-family: 'Poppins', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .antifatiga-info {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .antifatiga-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .antifatiga-desc {
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+        }
+        
+        .footer-cta {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+                        justify-content: center;
+            font-size: 24px;
+        }
+        
+        .footer-text {
+            text-align: left;
+        }
+        
+        .footer-label {
+            font-size: 13px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            opacity: 0.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            .product-card, .mixed-card, .antifatiga-card {
+                break-inside: avoid;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .products-showcase, .mixed-grid, .antifatiga-grid {
+                grid-template-columns: 1fr;
+            }
+            .brand-name {
+                font-size: 36px;
+            }
+            .contact-ribbon {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <h1 class="brand-name">Felpudos y Servicios</h1>
+                <p class="brand-subtitle">Calidad Profesional para su Negocio</p>
+            </div>
+            <div class="contact-ribbon">
+                <div class="contact-item">
+                    <div class="contact-icon">@</div>
+                    <span>felpudosyservicios@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <span> 996 017 068 </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            
+            <!-- Vinyl Mats -->
+            <div class="section-header">
+                <div class="section-title">
+                    <div class="section-icon">◆</div>
+                    Felpudos de Vinilo
+                </div>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="products-showcase">
+                <div class="product-card">
+                    <span class="product-badge">15mm Espesor</span>
+                    <div class="product-image">
+                        <img src="felpudo-vinil.jpg" alt="Felpudo Vinilo 15mm" onerror="this.style.display='none'">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Alto Transito</div>
+                        <h3 class="product-name">Felpudo Vinilo Alto Transito</h3>
+                        <div class="product-specs">
+                            1.20 × 1.00 metros<br>
+                            Espesor: 15mm<br>
+                            Colores: Negro / Gris Oscuro
+                        </div>
+                        <div class="price-container">
+                            <div class="price-tag">
+                                <span class="currency">S/</span>
+                                <span class="price">158.00</span>
+                                <span class="tax">inc. IGV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">13mm Espesor</span>
+                    <div class="product-image">
+                        <img src="felpudo-vinil2.jpg" alt="Felpudo Vinilo 13mm" onerror="this.style.display='none'">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Standard</div>
+                        <h3 class="product-name">Felpudo Vinilo Standard</h3>
+                        <div class="product-specs">
+                            1.20 × 1.00 metros<br>
+                            Espesor: 13mm<br>
+                            Colores: Negro / Gris Oscuro
+                        </div>
+                        <div class="price-container">
+                            <div class="price-tag">
+                                <span class="currency">S/</span>
+                                <span class="price">135.00</span>
+                                <span class="tax">inc. IGV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Order -->
+            <div class="custom-card">
+                <div style="width:100%; max-width:500px; margin:0 auto 25px auto;">
+        <img src="felpudo-smartfit.jpg" 
+             alt="Felpudo Personalizado con Logo" 
+             style="width:100%; border-radius:15px; object-fit:cover;"
+             onerror="this.style.display='none'">
+    </div>
+		<div class="custom-card">
+                <h3 class="custom-title">¿Necesitas un felpudo con el logo de tu marca o negocio?</h3>
+                <p class="custom-text">Personalizamos sus felpudos con su marca o diseño corporativo</p>
+                <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+
+    	<!-- 📧 BOTÓN EMAIL -->
+    	<a href="mailto:felpudosyservicios@gmail.com?subject=Cotización%20Felpudo%20Personalizado&body=Hola,%20deseo%20una%20cotización%20para%20X (indicar cantidad)%20felpudo(s)%20con%	20logo.%0A%0AMis%20datos:%0A%0ANombre:%0ATeléfono:%0AEmpresa:%0ADirección de entrega:%0A%0A%0ASe%20adjunta%20LOGO%20de%20mi%20negocio%20en%20JPG y%20las%20medidas%	20correspondientes%20a%20continuación:" 
+       	class="custom-button">
+
+        <span>📧</span>
+        <span>Email</span>
+    </a>
+
+    	<!-- 💬 BOTÓN WHATSAPP -->
+    	<a href="https://wa.me/51998613326?text=Hola,%20deseo%20una%20cotización%20para%20un%20felpudo%20con%20logo.%0A%0AMis%20datos:%0A%0ANombre:%0ATeléfono:%	0AEmpresa:%0A%0ASe%20adjunta%20LOGO%20de%20mi%20negocio%20en%20JPGy%20las%20medidas%20correspondientes%20a%20continuación:" 
+       class="custom-button"
+       style="background:#25D366;">
+
+        <span>💬</span>
+        <span>WhatsApp</span>
+    </a>
+
+</div>
+                    <span>📧</span>
+                    <span>Solicitar Cotización Personalizada</span>
+                </a>
+            </div>
+
+            <!-- Mixed Mats -->
+            <div class="section-header">
+                <div class="section-title">
+                    <div class="section-icon">✦</div>
+                    Felpudos Mixtos
+                </div>
+                <div class="section-line"></div>
+            </div>
+            
+            <p style="color: var(--gray); margin-bottom: 25px; font-size: 17px; text-align: center;">
+                Para limpiar y secar • Color Gris Oscuro con Perfil de Jebe
+            </p>
+            
+            <div class="mixed-grid">
+                <div class="mixed-card">
+                    <div style="width:100%; height:160px; margin-bottom:15px; overflow:hidden; border-radius:12px;">
+        <img src="felpudo-mixto.jpg"
+             alt="Felpudo Mixto"
+             style="width:100%; height:100%; object-fit:cover;"
+             onerror="this.style.display='none'">
+    </div>
+
+		    <div class="size-display">1.20m</div>
+                    <div class="size-label">× 1.00 metro</div>
+                    <div class="mixed-price">
+                        <span class="mixed-currency">S/</span>230
+                    </div>
+                    <div style="font-size: 12px; color: var(--gray); margin-top: 10px;">inc. IGV</div>
+                </div>
+
+		<div class="mixed-card">
+                    <div style="width:100%; height:160px; margin-bottom:15px; overflow:hidden; border-radius:12px;">
+        <img src="felpudo-mixto2.jpg"
+             alt="Felpudo Mixto"
+             style="width:100%; height:100%; object-fit:cover;"
+             onerror="this.style.display='none'">
+    </div>                
+                    <div class="size-display">1.60m</div>
+                    <div class="size-label">× 1.00 metro</div>
+                    <div class="mixed-price">
+                        <span class="mixed-currency">S/</span>270
+                    </div>
+                    <div style="font-size: 12px; color: var(--gray); margin-top: 10px;">inc. IGV</div>
+                </div>
+
+		<div class="mixed-card">
+                    <div style="width:100%; height:160px; margin-bottom:15px; overflow:hidden; border-radius:12px;">
+        <img src="felpudo-mixto3.jpg"
+             alt="Felpudo Mixto"
+             style="width:100%; height:100%; object-fit:cover;"
+             onerror="this.style.display='none'">
+    </div>
+              
+                    <div class="size-display">1.80m</div>
+                    <div class="size-label">× 1.00 metro</div>
+                    <div class="mixed-price">
+                        <span class="mixed-currency">S/</span>300
+                    </div>
+                    <div style="font-size: 12px; color: var(--gray); margin-top: 10px;">inc. IGV</div>
+                </div>
+            </div>
+
+            <!-- Antifatiga -->
+            <div class="antifatiga-section">
+                <div class="section-header" style="margin-bottom: 10px;">
+                    <div class="section-title" style="font-size: 28px;">
+                        <div class="section-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">◈</div>
+                        Pisos Antifatiga
+                    </div>
+                </div>
+                <p style="color: #065f46; text-align: center; font-size: 16px; margin-bottom: 20px;">
+                    Confort ergonómico para áreas de trabajo • Medida 1.50 × 0.90 m
+                </p>
+                
+                <div class="antifatiga-grid">
+                    <div class="antifatiga-card">
+                       <div class="antifatiga-visual">
+    			<img src="piso-antifatiga2.jpg"
+         		alt="Piso Antifatiga 9mm"
+         		style="width:100%; height:100%; object-fit:cover;"
+         		onerror="this.style.display='none'">
+		</div>
+                        <div class="antifatiga-info">
+                            <div>
+                                <h4 class="antifatiga-title">Espesor 9mm</h4>
+                                <p class="antifatiga-desc">Ideal para estaciones de trabajo ligeras</p>
+                            </div>
+                            <div class="price-tag" style="align-self: flex-start;">
+                                <span class="currency">S/</span>
+                                <span class="price">110.00</span>
+                                <span class="tax">inc. IGV</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="antifatiga-card">
+                            <div class="antifatiga-visual">
+    			<img src="piso-antifatiga1.jpg"
+         		alt="Piso Antifatiga 11mm"
+         		style="width:100%; height:100%; object-fit:cover;"
+         		onerror="this.style.display='none'">
+		</div>
+                        <div class="antifatiga-info">
+                            <div>
+                                <h4 class="antifatiga-title">Espesor 11mm</h4>
+                                <p class="antifatiga-desc">Máximo confort para uso industrial intensivo</p>
+                            </div>
+                            <div class="price-tag" style="align-self: flex-start;">
+                                <span class="currency">S/</span>
+                                <span class="price">210.00</span>
+                                <span class="tax">inc. IGV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h2 class="footer-cta">¿Deseas una cotización?</h2>
+            <div class="footer-contact">
+                <div class="footer-item">
+                    <div class="footer-icon">✉</div>
+                    <div class="footer-text">
+                        <div class="footer-label">Email</div>
+                        <div class="footer-value">felpudosyservicios@gmail.com</div>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-icon">📱</div>
+                    <div class="footer-text">
+                        <div class="footer-label">Teléfono / WhatsApp</div>
+                        <div class="footer-value">996 017 068</div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Felpudos y Servicios. Todos los derechos reservados. • Precios sujetos a cambio sin previo aviso
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
