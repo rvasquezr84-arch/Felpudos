@@ -2,15 +2,32 @@
 
 Documento de referencia con la identidad de marca de los tres proyectos en los que se viene trabajando: **Felpudos y Servicios**, **Daynite Nutrition** y la **marca personal de entrenamiento** (streetworkout + box + coaching).
 
+> Este archivo es el resumen ejecutivo. El material fuente completo (cotizaciones, catálogos, business case, capturas, etc.) vive organizado por marca en [`contexto-marcas/`](./contexto-marcas/), para consulta cuando se pidan tareas específicas sobre cada negocio.
+
 ---
 
 ## 1. Felpudos y Servicios
 
-**Categoría:** Felpudos comerciales / industriales y pisos antifatiga
-**Tagline:** "Calidad Profesional para su Negocio"
-**Contacto:** felpudosyservicios@gmail.com · WhatsApp +51 998 613 326
+**Nombre comercial:** Felpudos y Servicios · **Razón social:** Felpudos y Películas S.A.C. · **RUC:** 20512620265
+**Categoría:** Felpudos comerciales/industriales, pisos antifatiga y alfombras corporativas · +20 años de experiencia
+**Tagline (sitio web):** "Calidad Profesional para su Negocio"
+**Contacto:** felpudosyservicios@gmail.com · Cel. 996017068 · WhatsApp cotizaciones 998 613 326
+**Dirección:** Av. Alfredo Benavides 3663, Of. 603, Santiago de Surco, Lima
+**Representante:** Raúl Vásquez Sigarróstegui — Gerente General
 
-### Identidad visual
+### ⚠️ Dos identidades visuales conviviendo — a unificar
+El `index.html` del catálogo web usa una paleta genérica (navy/rojo/dorado), pero **el logo real que ven los clientes** en cotizaciones y flyers oficiales es otro, con otra paleta. Se recomienda migrar el sitio a la identidad real.
+
+**Identidad real (logo oficial, extraída de cotizaciones/flyer — ver `contexto-marcas/felpudos-y-servicios/logo_oficial_extraido.png`):**
+| Uso | Color | Hex |
+|---|---|---|
+| Rayas/base del felpudo (ícono) | Amarillo dorado | `#FAB035` |
+| Franja inferior del ícono | Naranja | `#F58038` |
+| Contorno, badge "F", texto "Y SERVICIOS" | Teal/petróleo | `#005E7D` |
+| Texto "FELPUDOS" | Magenta/rosa | `#C2266B` |
+| Fondo | Blanco | `#FFFFFF` |
+
+**Identidad actual del sitio web (`index.html`, a revisar si se mantiene o se reemplaza):**
 | Uso | Color | Hex |
 |---|---|---|
 | Primario (fondo oscuro / header) | Navy | `#0F172A` |
@@ -21,20 +38,25 @@ Documento de referencia con la identidad de marca de los tres proyectos en los q
 | Fondo claro | Off-white | `#F8FAFC` |
 | Texto secundario | Gris | `#64748B` |
 
-- **Tipografía:** Poppins (títulos/headings) + Inter (cuerpo de texto)
-- **Estilo:** catálogo B2B, tarjetas de producto con degradados navy→rojo, cards blancas con sombra
+- **Tipografía del sitio:** Poppins (títulos/headings) + Inter (cuerpo de texto)
 
 ### Producto y oferta
-- Felpudos de Vinilo (Alto Tránsito, Standard)
-- Felpudos Mixtos
-- Piso Antifatiga
-- Personalización con logo corporativo (servicio diferenciador clave)
+- Felpudo de Vinilo Atrapamugre (Alto Tránsito, 14mm) — marca base "Confort Mat" — desde S/110
+- Felpudos Mixtos (limpian y secan, perfil de jebe) — S/200–280 según medida
+- Piso Antifatiga (9mm/13mm) — S/120–200
+- Felpudos personalizados con logo (hechos a mano) — S/320–410 según tamaño/complejidad
+- Alfombras para oficinas corporativas
+
+### Condiciones comerciales estándar
+Adelanto 50% + saldo contra entrega · Entrega 2–3 días hábiles · Garantía 1 año por falla de fabricación · Precio válido 15 días · Todo incluye IGV.
 
 ### Tono
 Profesional, directo, orientado a negocios (B2B). Mensaje central: calidad y durabilidad para uso comercial/industrial, con opción de personalización de marca para el cliente.
 
-### Canales
-WhatsApp y correo como canales de cotización directa; catálogo web (`index.html`) como vitrina de producto.
+### Canales y clientes de referencia
+WhatsApp y correo como canales de cotización directa; catálogo web (`index.html`) como vitrina de producto. Cartera: TGI Fridays, Veterinaria Orbegoso, FINA, Bar Popular, entre otros a nivel nacional.
+
+> Detalle completo de cotizaciones, precios por cliente y documentos fuente en [`contexto-marcas/felpudos-y-servicios/`](./contexto-marcas/felpudos-y-servicios/notas.md).
 
 ---
 
@@ -122,6 +144,8 @@ WhatsApp y correo como canales de cotización directa; catálogo web (`index.htm
 - **Canales:** directo (Instagram/WhatsApp, mayor margen) → retail selectivo (tiendas saludables, cafés, gimnasios) → ferias naturistas/veganas
 - **Cofundadores:** Raúl Vásquez y Renzo Quiroz
 
+> Detalle completo de avatares, catálogo, business case y arte de etiqueta en [`contexto-marcas/daynite-nutrition/`](./contexto-marcas/daynite-nutrition/notas.md).
+
 ---
 
 ## 3. Marca Personal — Streetworkout + Box + Coaching *(en definición)*
@@ -145,3 +169,5 @@ WhatsApp y correo como canales de cotización directa; catálogo web (`index.htm
 - **Tono de voz final** (más allá del bio actual)
 
 > Esta sección se completará cuando el usuario defina nombre y línea visual. Mientras tanto, el resto del brand kit (Felpudos y Servicios, Daynite Nutrition) está listo para uso.
+>
+> Notas y capturas fuente en [`contexto-marcas/marca-personal/`](./contexto-marcas/marca-personal/notas.md).
