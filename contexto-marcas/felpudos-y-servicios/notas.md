@@ -57,20 +57,36 @@ El usuario mencionó que compartirá más cotizaciones para que más adelante se
 
 ## Cotizador de costeo (Excel)
 
-`herramientas/Felpudos_Cotizador.xlsx` — transcripción a Excel de las notas de costeo manuscritas
-del usuario (fotos compartidas el 2026-07-21, no guardadas como archivo porque se pegaron
-directo en el chat en vez de adjuntarse). Contiene 3 pestañas:
+`herramientas/Felpudos_Cotizador.xlsx` (v2) — transcripción a Excel de las notas de costeo
+manuscritas del usuario (fotos compartidas el 2026-07-21, no guardadas como archivo porque se
+pegaron directo en el chat en vez de adjuntarse). Contiene 3 pestañas:
 
-- **Datos Base:** todas las tarifas/costos unitarios transcritos (materiales, mano de obra,
-  perfiles, márgenes sugeridos por línea de producto).
-- **Cotizador:** calculadora con inputs (ancho, alto, ¿lleva logo?, marca/espesor si es rollo,
-  margen deseado) que calcula el precio sugerido automáticamente, para las 3 líneas con datos
-  de costeo: Felpudo de Vinilo (con o sin logo), Felpudos Mixtos, Piso Antifatiga.
-- **Notas y Supuestos:** documenta cómo se derivaron las fórmulas (regresión lineal sobre los
-  ejemplos manuscritos) y los puntos a validar con el usuario — especialmente:
-  - La regla de "longitud extra de ribete" (0.20m vs 0.30m) se infirió de los 4 ejemplos, no está confirmada.
-  - El costo de Paolo 15mm aparece como S/90 en una sección de la foto y S/95 en otra (se usó S/95).
-  - La mano de obra de Felpudos Mixtos se interpoló con solo 3 puntos — es la fórmula menos confiable.
+- **Datos Base:** tabla única de materiales (Confort Mat, Multilop, Paolo, Q Rubber) en S//m²,
+  tabla de niveles de complejidad de logo (Simple/Media/Compleja), y las tarifas de Mixtos y
+  Piso Antifatiga.
+- **Cotizador:** calculadora con inputs — ancho, alto, **marca y espesor (siempre activo, con o
+  sin logo)**, ¿lleva logo?, **complejidad del logo (Simple/Media/Compleja)** si aplica, y margen
+  deseado — que calcula el precio sugerido automáticamente. Cubre las 3 líneas: Felpudo de Vinilo
+  (con o sin logo), Felpudos Mixtos, Piso Antifatiga.
+- **Notas y Supuestos:** documenta cómo se derivaron las fórmulas y los puntos a validar.
+
+**Cambio de diseño (v2, pedido por el usuario):** antes la marca/espesor solo se usaba cuando el
+felpudo NO llevaba logo (con logo se asumía siempre "Confort Mat"). Ahora la marca/espesor se
+elige siempre, independiente del logo, y la complejidad del logo es un factor aparte con su
+propio impacto en costo de material y mano de obra.
+
+**Pendiente clave — sin datos reales:** solo el nivel de complejidad "Media" está calibrado con
+los 4 ejemplos manuscritos reales. Los multiplicadores de "Simple" (×0.6 material / ×0.7 mano de
+obra) y "Compleja" (×1.5 material / ×1.4 mano de obra) son **estimaciones** marcadas en ámbar en
+la pestaña Datos Base — ajustar en cuanto el usuario comparta cotizaciones reales de logos
+simples y complejos.
+
+Otros supuestos pendientes de validar (ver pestaña Notas y Supuestos del Excel):
+- Conversión de S//m lineal a S//m² para Multilop/Paolo/Q Rubber (÷1.20m de ancho de rollo) —
+  asume que un corte más angosto cuesta proporcionalmente lo mismo por m².
+- La regla de "longitud extra de ribete" (0.20m vs 0.30m) se infirió de los 4 ejemplos, no está confirmada.
+- El costo de Paolo 15mm aparece como S/90 en una sección de la foto y S/95 en otra (se usó S/95).
+- La mano de obra de Felpudos Mixtos se interpoló con solo 3 puntos — es la fórmula menos confiable.
 
 **Pendiente:** validar estos supuestos con el usuario y, si se comparten más ejemplos reales de
 cotizaciones, recalibrar las fórmulas en la pestaña "Datos Base" (el Cotizador se actualiza solo).
