@@ -76,11 +76,17 @@ elige siempre, independiente del logo, y la complejidad del logo es un factor ap
 propio impacto en costo de material y mano de obra.
 
 **Pendiente clave — sin datos reales:** solo el nivel de complejidad "Media" está calibrado con
-los 4 ejemplos manuscritos reales. Los multiplicadores de "Simple" (×0.8 material y mano de obra)
-y "Compleja" (×1.2 material y mano de obra) son **estimaciones ajustadas por el usuario** (pidió
-menos diferencia entre niveles que la propuesta inicial ×0.6/×1.5) — siguen marcadas en ámbar en
-la pestaña Datos Base, ajustar de nuevo en cuanto el usuario comparta cotizaciones reales de logos
+los 4 ejemplos manuscritos reales. El multiplicador de "Simple" (×0.8, solo afecta material) y
+"Compleja" (×1.2, solo afecta material) son **estimaciones ajustadas por el usuario** (pidió menos
+diferencia entre niveles que la propuesta inicial ×0.6/×1.5) — siguen marcadas en ámbar en la
+pestaña Datos Base, ajustar de nuevo en cuanto el usuario comparta cotizaciones reales de logos
 simples y complejos.
+
+**Mano de obra (v3, corregido por el usuario):** ya no se calcula con fórmula — el usuario paga en
+la práctica 4 niveles fijos según tamaño y complejidad combinados (criterio propio, no una regla
+derivable de ancho/alto): Nivel 1 = S/100, Nivel 2 = S/120, Nivel 3 = S/150, Nivel 4 = S/180. El
+nivel se elige manualmente en el Cotizador (Datos Base, sección 1c). Esto reemplazó la fórmula
+lineal (S/80 fijo + S/37.04/m²) de la v1/v2.
 
 Otros supuestos pendientes de validar (ver pestaña Notas y Supuestos del Excel):
 - Conversión de S//m lineal a S//m² para Multilop/Paolo/Q Rubber (÷1.20m de ancho de rollo) —
