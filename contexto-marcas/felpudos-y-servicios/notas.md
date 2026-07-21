@@ -54,3 +54,23 @@ TGI Fridays (foto de portada del flyer), Veterinaria Orbegoso, FINA / Zyra Grupo
 
 ## Uso futuro
 El usuario mencionó que compartirá más cotizaciones para que más adelante se le ayude a automatizar/gestionar ese proceso (generación de proformas, seguimiento, etc.).
+
+## Cotizador de costeo (Excel)
+
+`herramientas/Felpudos_Cotizador.xlsx` — transcripción a Excel de las notas de costeo manuscritas
+del usuario (fotos compartidas el 2026-07-21, no guardadas como archivo porque se pegaron
+directo en el chat en vez de adjuntarse). Contiene 3 pestañas:
+
+- **Datos Base:** todas las tarifas/costos unitarios transcritos (materiales, mano de obra,
+  perfiles, márgenes sugeridos por línea de producto).
+- **Cotizador:** calculadora con inputs (ancho, alto, ¿lleva logo?, marca/espesor si es rollo,
+  margen deseado) que calcula el precio sugerido automáticamente, para las 3 líneas con datos
+  de costeo: Felpudo de Vinilo (con o sin logo), Felpudos Mixtos, Piso Antifatiga.
+- **Notas y Supuestos:** documenta cómo se derivaron las fórmulas (regresión lineal sobre los
+  ejemplos manuscritos) y los puntos a validar con el usuario — especialmente:
+  - La regla de "longitud extra de ribete" (0.20m vs 0.30m) se infirió de los 4 ejemplos, no está confirmada.
+  - El costo de Paolo 15mm aparece como S/90 en una sección de la foto y S/95 en otra (se usó S/95).
+  - La mano de obra de Felpudos Mixtos se interpoló con solo 3 puntos — es la fórmula menos confiable.
+
+**Pendiente:** validar estos supuestos con el usuario y, si se comparten más ejemplos reales de
+cotizaciones, recalibrar las fórmulas en la pestaña "Datos Base" (el Cotizador se actualiza solo).
