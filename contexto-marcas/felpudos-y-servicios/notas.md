@@ -76,9 +76,10 @@ elige siempre, independiente del logo, y la complejidad del logo es un factor ap
 propio impacto en costo de material y mano de obra.
 
 **Pendiente clave — sin datos reales:** solo el nivel de complejidad "Media" está calibrado con
-los 4 ejemplos manuscritos reales. Los multiplicadores de "Simple" (×0.6 material / ×0.7 mano de
-obra) y "Compleja" (×1.5 material / ×1.4 mano de obra) son **estimaciones** marcadas en ámbar en
-la pestaña Datos Base — ajustar en cuanto el usuario comparta cotizaciones reales de logos
+los 4 ejemplos manuscritos reales. Los multiplicadores de "Simple" (×0.8 material y mano de obra)
+y "Compleja" (×1.2 material y mano de obra) son **estimaciones ajustadas por el usuario** (pidió
+menos diferencia entre niveles que la propuesta inicial ×0.6/×1.5) — siguen marcadas en ámbar en
+la pestaña Datos Base, ajustar de nuevo en cuanto el usuario comparta cotizaciones reales de logos
 simples y complejos.
 
 Otros supuestos pendientes de validar (ver pestaña Notas y Supuestos del Excel):
