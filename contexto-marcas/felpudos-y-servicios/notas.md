@@ -72,21 +72,20 @@ pegaron directo en el chat en vez de adjuntarse). Contiene 3 pestañas:
 
 **Cambio de diseño (v2, pedido por el usuario):** antes la marca/espesor solo se usaba cuando el
 felpudo NO llevaba logo (con logo se asumía siempre "Confort Mat"). Ahora la marca/espesor se
-elige siempre, independiente del logo, y la complejidad del logo es un factor aparte con su
-propio impacto en costo de material y mano de obra.
+elige siempre, independiente del logo.
 
-**Pendiente clave — sin datos reales:** solo el nivel de complejidad "Media" está calibrado con
-los 4 ejemplos manuscritos reales. El multiplicador de "Simple" (×0.8, solo afecta material) y
-"Compleja" (×1.2, solo afecta material) son **estimaciones ajustadas por el usuario** (pidió menos
-diferencia entre niveles que la propuesta inicial ×0.6/×1.5) — siguen marcadas en ámbar en la
-pestaña Datos Base, ajustar de nuevo en cuanto el usuario comparta cotizaciones reales de logos
-simples y complejos.
+**Modelo final de logo (v4, tras dos correcciones del usuario):** dos variables independientes,
+cada una con su propio efecto:
+- **Costo de material extra del logo:** depende SOLO del tamaño del felpudo — 0.20m (área < 1m²)
+  o 0.30m (área ≥ 1m²) de ribete × S/94.90/m (tarifa Multilop 12mm de la foto original). La
+  complejidad NO afecta este número.
+- **Mano de obra:** depende SOLO de la complejidad del logo — 3 tarifas fijas: Simple = S/100,
+  Media = S/120 (única calibrada con dato real: ejemplo Vet. Orbegoso 1.20×0.90m), Compleja =
+  S/150. Se elige manualmente en el Cotizador (Datos Base, sección 1b).
 
-**Mano de obra (v3, corregido por el usuario):** ya no se calcula con fórmula — el usuario paga en
-la práctica 4 niveles fijos según tamaño y complejidad combinados (criterio propio, no una regla
-derivable de ancho/alto): Nivel 1 = S/100, Nivel 2 = S/120, Nivel 3 = S/150, Nivel 4 = S/180. El
-nivel se elige manualmente en el Cotizador (Datos Base, sección 1c). Esto reemplazó la fórmula
-lineal (S/80 fijo + S/37.04/m²) de la v1/v2.
+(Se descartaron dos intentos previos: un multiplicador de complejidad sobre el material, y 4
+"niveles" combinados de tamaño+complejidad para mano de obra — el usuario prefirió este modelo
+más simple de dos variables independientes.)
 
 Otros supuestos pendientes de validar (ver pestaña Notas y Supuestos del Excel):
 - Conversión de S//m lineal a S//m² para Multilop/Paolo/Q Rubber (÷1.20m de ancho de rollo) —
